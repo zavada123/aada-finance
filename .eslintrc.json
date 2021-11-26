@@ -1,0 +1,55 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "camelcase": "warn",
+    "import/named": "off",
+    "import/no-cycle": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "import/no-mutable-exports": "warn",
+    "import/no-dynamic-require": "off",
+    "import/extensions": "off",
+    "class-methods-use-this": "warn",
+    "no-shadow": "warn",
+    "no-await-in-loop": "warn",
+    "no-continue": "warn",
+    "no-console": "off",
+    "no-underscore-dangle": 0,
+    "no-new": "warn",
+    "prefer-destructuring": "warn",
+    "no-useless-concat": "warn",
+    "no-useless-escape": "warn",
+    "no-plusplus": "off",
+    "no-unders core-dangle": "off",
+    "no-use-before-define": "off",
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ],
+    "no-nested-ternary": "warn",
+    "no-return-assign": "off",
+    "no-param-reassign": "off",
+    "no-control-regex": "off",
+    "no-restricted-globals": "warn",
+    "consistent-return": "off",
+    "global-require": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "es5",
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}

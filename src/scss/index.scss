@@ -1,0 +1,97 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Rajdhani';
+  color: #475166;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  padding: 20px 0;
+  .logo {
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.main {
+  flex: 1;
+  background-image: url('https://aada.finance/wp-content/uploads/2021/06/aada-main-2.png');
+  background-position: center 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 54px;
+  font-weight: 600;
+  span {
+    display: block;
+    &:first-child {
+      color: #34bbff;
+    }
+  }
+}
+
+hr {
+  background-image: linear-gradient(
+    to right,
+    rgb(52, 187, 255),
+    rgb(40, 238, 219)
+  );
+  width: 60px;
+  height: 3px !important;
+  display: block;
+  border: 0;
+  opacity: 1;
+  margin-bottom: 50px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Karla';
+  margin-bottom: 80px;
+}
+
+h2 {
+  font-size: 54px;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  font-size: 35px;
+  font-family: 'Karla';
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 0;
+  outline: 0;
+  border-radius: 45px;
+  letter-spacing: 0.84px;
+  padding: 14px 50px;
+  line-height: 1;
+  background: #475166;
+  transition: all 0.3s;
+  box-shadow: none;
+  line-height: 23px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: transparent;
+    color: #475166;
+    border: 0;
+    box-shadow: none !important;
+  }
+}

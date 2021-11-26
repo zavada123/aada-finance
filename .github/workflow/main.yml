@@ -1,0 +1,26 @@
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy_job:
+    runs-on: ubuntu-latest
+    name: deploy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install dependencies and build for frontend
+        run: yarn build
+      - name: SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.1       
+        with:
+          username: '${{ secrets.LOGIN }}'
+          server: '${{ secrets.HOST }}'
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
+          local_path: './dist/*'
+          remote_path: '/' # folder path on server
+          args: '-o ConnectTimeout=5'
